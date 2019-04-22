@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Touch event</title>
+  <script>
+      document.title = window.location.hash.split('_')[2];
+  </script>
+  
+  <!-- Style -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <!-- Prism -->
+  <link rel="stylesheet" href="../../css/libs/prism.css">
+  <!-- Prism -->
+  <!-- Style -->
+</head>
+<body>
+<!-- Head -->
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <span class="page-name">123</span>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Head -->
+
+<!-- Content -->
+<div class="container mtests__container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="mtests__wrapper">
+        <from class="tests-form" action method="GET">
+          <div class="test-block plate-style">
+            
+            <!--Question header-->
+            <div class="test-block__header">
+              <span class="test-block__header_quest-num">
+                <span class="quest-index">3</span> из <span class="quest-all">20</span>.
+              </span>
+              <span class="test-block__header_quest-txt">Откуда новый объект получает __proto__?</span>
+            </div>
+            <!--Question header-->
+            
+            <!--Question variants-->
+            <div class="test-block__variants">
+              <ul class="test-block__list">
+                
+                <li class="variant__list_item">
+                  <input class="variant__list_item_inp" type="radio" name="rad_01" value="tests" id="var_01">
+                  <label class="variant__list_item_label" for="var_01">Новому объекту ставится __proto__ по prototype конструктора</label>
+                </li>
+                
+                <li class="variant__list_item">
+                  <input class="variant__list_item_inp" type="radio" name="rad_01" value="tests" id="var_02">
+                  <label class="variant__list_item_label" for="var_02">Примитивы — не объекты. Но методы берут из соответствующих прототипов. Если обратиться к свойству примитива,
+                    будет создан соответствующий объетк</label>
+                </li>
+                
+                <li class="variant__list_item">
+                  <input class="variant__list_item_inp" type="radio" name="rad_01" value="tests" id="var_03">
+                  <label class="variant__list_item_label" for="var_03">У нового объекта нет __proto__</label>
+                </li>
+              
+              </ul>
+            </div>
+            <!--Question variants-->
+          </div>
+          
+          <div class="button-wrapper">
+            <button class="button button__next">Следующий вопрос</button>
+            <button class="button button__end-test">Завершить тест</button>
+          </div>
+        </from>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Content -->
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p class="copy-block">
+          <a href="http://vmasterov.ru" class="copy-right">Masterov</a> © <span class="footer-year">0000</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer -->
+
+<!-- Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="../js/main.js"></script>
+<!-- Prism -->
+<script src="../../js/libs/prism/prism.js"></script>
+<!-- Prism -->
+<!--mTests-->
+<script>
+  var fileName = window.location.hash.slice(1);
+  $( 'body' ).append( '<script src="../js/js_tests/' + fileName + '.js"><\/script>' );
+</script>
+<!--<script src="../js/js_tests/touch_event.js"></script>-->
+<script src="../js/mTests.js"></script>
+<!--mTests-->
+<!-- Script -->
+</body>
+</html>
